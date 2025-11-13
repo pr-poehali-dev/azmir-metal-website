@@ -20,11 +20,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://cdn.poehali.dev/files/33300037-8a33-4d07-86d4-9d0f530d2e8c.jpg" 
-                alt="АЗМИР логотип"
-                className="w-14 h-14 rounded-full object-cover"
-              />
+              <div className="w-12 h-12 bg-primary rounded-sm flex items-center justify-center">
+                <span className="text-white font-bold text-xl">АЗ</span>
+              </div>
               <div>
                 <h1 className="text-xl font-bold text-foreground leading-tight">АЗМИР</h1>
                 <p className="text-xs text-muted-foreground">Алтайский завод</p>
@@ -32,7 +30,7 @@ const Index = () => {
             </div>
             
             <div className="hidden md:flex space-x-8">
-              {['Главная', 'Продукция', 'Производство', 'О компании', 'Проекты', 'Контакты'].map((item) => (
+              {['Главная', 'Продукция', 'Производство', 'О компании', 'Проекты', 'Сертификаты', 'Контакты'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -69,19 +67,15 @@ const Index = () => {
             </h1>
             
             <p className="text-xl text-slate-300 mb-10 max-w-2xl">
-              Производство оборудования из нержавеющей стали для пищевой промышленности. 
-              Резервуары, емкости, металлоконструкции — ручная сварка высочайшего качества.
+              Качество ручной работы. Индивидуальный подход к каждому заказу. 
+              Полный цикл производства металлоконструкций на Алтае.
             </p>
             
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
                 Получить расчет
               </Button>
-              <Button 
-                size="lg" 
-                onClick={() => scrollToSection('проекты')}
-                className="bg-gradient-to-r from-primary to-cyan-600 hover:from-primary/90 hover:to-cyan-600/90 text-white border-0 text-lg px-8 shadow-lg"
-              >
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8">
                 Наши проекты
               </Button>
             </div>
@@ -120,20 +114,20 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Резервуары из нержавеющей стали',
-                description: 'Емкости для хранения продуктов, жидкостей, молока. Соответствие ГОСТ для пищевой промышленности.',
+                title: 'Резервуары и емкости',
+                description: 'Резервуары для хранения жидкостей, топлива, воды. Любой объем и конфигурация.',
                 icon: 'Container',
                 image: 'https://cdn.poehali.dev/projects/0c2644c8-3d1e-43a8-bdfb-9e74c7a9a10f/files/9d2e5155-f5d1-4c65-b0f0-94d2500dc6cc.jpg'
               },
               {
-                title: 'Оборудование для пищевого производства',
-                description: 'Емкости, баки, системы хранения из нержавейки AISI 304/316. Ручная аргонная сварка.',
-                icon: 'Factory',
+                title: 'Металлоконструкции',
+                description: 'Каркасы зданий, навесы, ангары, фермы. Проектирование и изготовление.',
+                icon: 'Building',
                 image: 'https://cdn.poehali.dev/projects/0c2644c8-3d1e-43a8-bdfb-9e74c7a9a10f/files/0722f825-272f-4f02-a6a7-8057eb67c5df.jpg'
               },
               {
                 title: 'Изделия на заказ',
-                description: 'Нестандартные конструкции из нержавеющей стали по вашим чертежам. Любая сложность.',
+                description: 'Нестандартные металлоизделия по чертежам заказчика. Любая сложность.',
                 icon: 'Wrench',
                 image: 'https://cdn.poehali.dev/projects/0c2644c8-3d1e-43a8-bdfb-9e74c7a9a10f/files/6f78ee9f-56c6-478a-b067-4498afa0f6d8.jpg'
               }
@@ -171,8 +165,8 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Наше производство</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Специализируемся на производстве оборудования из нержавеющей стали для пищевой промышленности. 
-              Аргонная сварка, соответствие санитарным нормам, индивидуальные решения любой сложности.
+              Ручная сварка — это наше преимущество. Каждое изделие проходит тщательный контроль качества. 
+              Индивидуальный подход позволяет реализовать проекты любой сложности.
             </p>
           </div>
           
@@ -190,10 +184,10 @@ const Index = () => {
                   <Icon name="Flame" className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Аргонная сварка нержавейки</h3>
+                  <h3 className="text-2xl font-bold mb-2">Ручная сварка</h3>
                   <p className="text-slate-300">
-                    Профессиональная аргонодуговая сварка нержавеющей стали AISI 304/316. 
-                    Герметичные швы для пищевого оборудования, соответствие санитарным требованиям.
+                    Профессиональные сварщики с многолетним опытом обеспечивают прочность каждого шва. 
+                    Ручная работа гарантирует точность и внимание к деталям.
                   </p>
                 </div>
               </div>
@@ -234,13 +228,13 @@ const Index = () => {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">О компании АЗМИР</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Алтайский завод металлоизделий и резервуаров — производитель оборудования из нержавеющей стали 
-                для пищевой и перерабатывающей промышленности.
+                Алтайский завод металлоизделий и резервуаров — это современное производственное предприятие, 
+                специализирующееся на изготовлении металлоконструкций и резервуаров различного назначения.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Изготавливаем резервуары, емкости, технологические линии из нержавейки AISI 304 и AISI 316. 
-                Применяем аргонодуговую сварку для герметичности и соответствия санитарным нормам. 
-                Работаем с типовыми и индивидуальными проектами любой сложности.
+                Наша команда опытных специалистов применяет проверенные технологии ручной сварки, 
+                что обеспечивает высочайшее качество каждого изделия. Мы работаем как с типовыми, 
+                так и с уникальными проектами, реализуя самые сложные технические решения.
               </p>
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="border-l-4 border-primary pl-4">
@@ -279,9 +273,9 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: 'Емкости из нержавейки для молочного завода', category: 'Пищевая промышленность', image: 'https://cdn.poehali.dev/projects/0c2644c8-3d1e-43a8-bdfb-9e74c7a9a10f/files/9d2e5155-f5d1-4c65-b0f0-94d2500dc6cc.jpg' },
-              { title: 'Резервуары AISI 304 для масложиркомбината', category: 'Производство масел', image: 'https://cdn.poehali.dev/projects/0c2644c8-3d1e-43a8-bdfb-9e74c7a9a10f/files/0722f825-272f-4f02-a6a7-8057eb67c5df.jpg' },
-              { title: 'Технологические емкости для мясопереработки', category: 'Мясная промышленность', image: 'https://cdn.poehali.dev/projects/0c2644c8-3d1e-43a8-bdfb-9e74c7a9a10f/files/6f78ee9f-56c6-478a-b067-4498afa0f6d8.jpg' },
+              { title: 'Резервуар 50м³', category: 'Промышленность', image: 'https://cdn.poehali.dev/projects/0c2644c8-3d1e-43a8-bdfb-9e74c7a9a10f/files/9d2e5155-f5d1-4c65-b0f0-94d2500dc6cc.jpg' },
+              { title: 'Металлокаркас ангара', category: 'Строительство', image: 'https://cdn.poehali.dev/projects/0c2644c8-3d1e-43a8-bdfb-9e74c7a9a10f/files/0722f825-272f-4f02-a6a7-8057eb67c5df.jpg' },
+              { title: 'Емкости для АПК', category: 'Сельское хозяйство', image: 'https://cdn.poehali.dev/projects/0c2644c8-3d1e-43a8-bdfb-9e74c7a9a10f/files/6f78ee9f-56c6-478a-b067-4498afa0f6d8.jpg' },
             ].map((project, idx) => (
               <Card key={idx} className="overflow-hidden group hover:shadow-xl transition-all cursor-pointer">
                 <div className="h-64 overflow-hidden relative">
@@ -303,6 +297,31 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="сертификаты" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Сертификаты и лицензии</h2>
+            <p className="text-xl text-muted-foreground">
+              Наше производство сертифицировано и соответствует всем требованиям
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {[
+              { icon: 'Award', title: 'Сертификат соответствия', desc: 'ГОСТ на производство' },
+              { icon: 'Shield', title: 'Лицензия на сварку', desc: 'Все виды сварочных работ' },
+              { icon: 'FileCheck', title: 'ISO 9001', desc: 'Система менеджмента качества' }
+            ].map((cert, idx) => (
+              <Card key={idx} className="p-8 text-center hover:shadow-lg transition-shadow">
+                <Icon name={cert.icon} className="w-16 h-16 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
+                <p className="text-muted-foreground">{cert.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="контакты" className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16">
@@ -314,7 +333,7 @@ const Index = () => {
                   <Icon name="MapPin" className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-bold mb-1">Адрес производства</div>
-                    <div className="text-slate-300">656037, Алтайский край, г. Барнаул, ул. Короленко, 65</div>
+                    <div className="text-slate-300">Алтайский край, г. Барнаул</div>
                   </div>
                 </div>
                 
@@ -322,7 +341,7 @@ const Index = () => {
                   <Icon name="Phone" className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-bold mb-1">Телефон</div>
-                    <div className="text-slate-300"><a href="tel:+79236776600" className="hover:text-primary transition-colors">+7 (923) 677-66-00</a></div>
+                    <div className="text-slate-300">+7 (3852) XXX-XXX</div>
                   </div>
                 </div>
                 
@@ -330,7 +349,7 @@ const Index = () => {
                   <Icon name="Mail" className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <div className="font-bold mb-1">Email</div>
-                    <div className="text-slate-300"><a href="mailto:prioritet-engin@mail.ru" className="hover:text-primary transition-colors">prioritet-engin@mail.ru</a></div>
+                    <div className="text-slate-300">info@azmir-altai.ru</div>
                   </div>
                 </div>
                 
@@ -375,11 +394,9 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <img 
-                  src="https://cdn.poehali.dev/files/33300037-8a33-4d07-86d4-9d0f530d2e8c.jpg" 
-                  alt="АЗМИР"
-                  className="w-12 h-12 rounded-full object-cover"
-                />
+                <div className="w-10 h-10 bg-primary rounded-sm flex items-center justify-center">
+                  <span className="text-white font-bold">АЗ</span>
+                </div>
                 <div>
                   <h3 className="text-white font-bold">АЗМИР</h3>
                 </div>
@@ -392,8 +409,8 @@ const Index = () => {
             <div>
               <h4 className="text-white font-bold mb-4">Продукция</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-primary transition-colors">Резервуары из нержавейки</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Оборудование для пищевой</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Резервуары</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Металлоконструкции</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Изделия на заказ</a></li>
               </ul>
             </div>
@@ -404,15 +421,16 @@ const Index = () => {
                 <li><a href="#" className="hover:text-primary transition-colors">О нас</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Производство</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Проекты</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Сертификаты</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-white font-bold mb-4">Контакты</h4>
               <ul className="space-y-2 text-sm">
-                <li>ул. Короленко, 65, Барнаул</li>
-                <li><a href="tel:+79236776600" className="hover:text-primary transition-colors">+7 (923) 677-66-00</a></li>
-                <li><a href="mailto:prioritet-engin@mail.ru" className="hover:text-primary transition-colors">prioritet-engin@mail.ru</a></li>
+                <li>г. Барнаул, Алтайский край</li>
+                <li>+7 (3852) XXX-XXX</li>
+                <li>info@azmir-altai.ru</li>
               </ul>
             </div>
           </div>
